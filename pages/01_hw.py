@@ -37,7 +37,7 @@ def Page():
     ]
 
     # 顯示地圖
-    m = leafmap.Map(center=(0, 0), zoom=2)
+    m = leafmap.Map(center=(0, 0), zoom=3)
     for _, row in filtered_df.iterrows():
         m.add_marker(location=(row["lat"], row["lon"]), popup=row["name"])
 
