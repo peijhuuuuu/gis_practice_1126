@@ -1,4 +1,4 @@
- import solara
+import solara
 
 
 @solara.component
