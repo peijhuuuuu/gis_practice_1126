@@ -1,12 +1,15 @@
 ---
-title: My Solara GIS App
-emoji: 🌍
-colorFrom: blue
-colorTo: green
+title: DuckDB Solara
+emoji: 📚
+colorFrom: green
+colorTo: yellow
 sdk: docker
 pinned: false
-app_port: 7860
+license: mit
+short_description: A solara web app template for DuckDB
 ---
-# 以下是您 README 的原有內容，例如：
-# 1105Solara-webmap-app
-從 Code 到 Cloud：用 Solara 與 Hugging Face 打造互動式地圖 Web App  (元件化與ipywidgets 的強大威力)
+This is a Solara web app for DuckDB. Click on the menu above to see the different examples.
+
+Source code: <https://github.com/opengeos/duckdb-solara>
+
+![](https://github.com/user-attachments/assets/216789ff-7e9d-46df-8bb0-9fbaca531a39)
