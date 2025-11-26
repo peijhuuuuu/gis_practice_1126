@@ -2,6 +2,7 @@ import solara
 import duckdb
 import pandas as pd
 import leafmap.foliumap as leafmap
+from solara.ui import select, slider
 
 # 下載 CSV 並存到 DuckDB
 url = "https://data.gishub.org/duckdb/cities.csv"
@@ -18,14 +19,14 @@ df = con.execute("SELECT * FROM cities").df()
 def Page():
     # 選單：選國家
     country_options = df["country"].unique().tolist()
-    country = solara.select(
+    country = select(
         label="Select country", options=country_options, value=country_options[0]
     )
 
     # 滑動尺標：人口範圍
     min_pop = int(df["population"].min())
     max_pop = int(df["population"].max())
-    population_range = solara.slider(
+    population_range = slider(
         label="Population", min=min_pop, max=max_pop, value=(min_pop, max_pop)
     )
 
