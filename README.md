@@ -1,2 +1,8 @@
-# gis_practice_1126
-NYC出租車分析
+title: DuckDB Solara
+emoji: 📚
+colorFrom: green
+colorTo: yellow
+sdk: docker
+pinned: false
+license: mit
+short_description: A solara web app template for DuckDB
