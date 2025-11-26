@@ -1,12 +1,12 @@
 ---
-title: DuckDB Solara
-emoji: 📚
-colorFrom: green
-colorTo: yellow
-sdk: docker
+title: NYC Subway Map
+emoji: 🗽
+colorFrom: "#1E90FF"
+colorTo: "#87CEFA"
+sdk: solara
+sdk_version: "0.3.0"
+app_file: app.py
 pinned: false
-license: mit
-short_description: A solara web app template for DuckDB
 ---
 This is a Solara web app for DuckDB. Click on the menu above to see the different examples.
 
