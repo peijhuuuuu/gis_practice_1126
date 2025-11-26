@@ -15,18 +15,16 @@ df = con.execute("SELECT * FROM cities").df()
 def Page():
     # 選單：選國家
     country_options = df["country"].unique().tolist()
-    country = solara.Select(  # 注意大寫 S
-        label="Select country", options=country_options, value=country_options[0]
-    )
+    country = solara.select(label="Select country", options=country_options, value=country_options[0])
 
     # 滑動尺標：人口範圍
     min_pop = int(df["population"].min())
     max_pop = int(df["population"].max())
-    population_range = solara.Slider( # 注意大寫 S
+    population_range = solara.slider(
         label="Population", min=min_pop, max=max_pop, value=(min_pop, max_pop)
     )
 
-    # 篩選資料
+    # 注意：slider 返回值是一個 tuple
     filtered_df = df[
         (df["country"] == country)
         & (df["population"] >= population_range[0])
